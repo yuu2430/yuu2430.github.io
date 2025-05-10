@@ -14,12 +14,24 @@
   
   <title>Vaishali Sharma | MSc Statistics | Data Artist</title>
   
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --primary-color: #2a5db0;
-      --secondary-color: #555;
+      --primary-color: #4361ee;
+      --primary-light: #e0e7ff;
+      --secondary-color: #6c757d;
       --light-gray: #f8f9fa;
+      --dark-gray: #343a40;
       --border-color: #eee;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
     }
     
     /* Smooth scrolling */
@@ -28,20 +40,19 @@
     }
     
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       color: #333;
       margin: 0;
       padding: 0;
       background-color: #fff;
-      background-image: radial-gradient(circle at 1px 1px, #f0f0f0 1px, transparent 0);
-      background-size: 20px 20px;
+      overflow-x: hidden;
     }
     
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 15px;
+      padding: 0 20px;
     }
     
     /* Navigation */
@@ -50,18 +61,38 @@
       top: 0;
       left: 0;
       right: 0;
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       z-index: 1000;
       padding: 15px 0;
+      backdrop-filter: blur(5px);
+      transition: var(--transition);
+    }
+    
+    .navbar.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     
     .navbar-brand {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 1.5rem;
-      color: #222;
+      color: var(--dark-gray);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand i {
+      margin-right: 8px;
+      color: var(--primary-color);
     }
     
     .navbar-nav {
@@ -72,18 +103,44 @@
     }
     
     .nav-item {
-      margin-left: 30px;
+      margin-left: 25px;
+      position: relative;
     }
     
     .nav-link {
-      color: #333;
+      color: var(--dark-gray);
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s;
+      transition: var(--transition);
+      font-size: 0.95rem;
+      padding: 5px 0;
     }
     
     .nav-link:hover {
       color: var(--primary-color);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--dark-gray);
     }
     
     /* Main Content */
@@ -96,22 +153,42 @@
     .profile-section {
       display: flex;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      gap: 40px;
+    }
+    
+    .profile-photo-container {
+      position: relative;
+      flex-shrink: 0;
     }
     
     .profile-photo {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin-right: 40px;
-      border: 3px solid var(--primary-color);
-      transition: transform 0.5s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 4px solid var(--primary-color);
+      transition: var(--transition);
+      box-shadow: var(--shadow);
     }
     
     .profile-photo:hover {
-      transform: rotate(5deg);
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .availability-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: var(--primary-color);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
     }
     
     .profile-info {
@@ -120,28 +197,48 @@
     
     .profile-name {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      margin: 0 0 5px 0;
-      color: #222;
+      margin: 0 0 8px 0;
+      color: var(--dark-gray);
+      line-height: 1.2;
     }
     
     .profile-title {
       font-weight: 500;
       color: var(--secondary-color);
-      margin: 0 0 10px 0;
+      margin: 0 0 15px 0;
+      font-size: 1.1rem;
     }
     
     .profile-links {
-      margin-top: 15px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
     
-    .profile-links a {
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
       color: var(--primary-color);
       text-decoration: none;
-      margin-right: 15px;
       font-weight: 500;
-      transition: all 0.3s;
+      transition: var(--transition);
+      padding: 8px 15px;
+      border-radius: 5px;
+      background-color: var(--primary-light);
+    }
+    
+    .profile-link i {
+      margin-right: 8px;
+    }
+    
+    .profile-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
     
     @keyframes pulse {
@@ -150,68 +247,116 @@
       100% { transform: scale(1); }
     }
     
-    .profile-links a:hover {
-      animation: pulse 1s infinite;
-      color: #1a3d7c;
-    }
-    
     /* Sections */
     .section {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+    }
+    
+    .section:hover {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
     
     .section-title {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.8rem;
       font-weight: 700;
-      margin-bottom: 20px;
-      color: #222;
-      background: linear-gradient(90deg, #FF9A9E 0%, #FAD0C4 50%, #A18CD1 100%);
-      background-size: 100% 3px;
-      background-repeat: no-repeat;
-      background-position: bottom left;
-      padding-bottom: 8px;
-      display: inline-block;
+      margin-bottom: 25px;
+      color: var(--dark-gray);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), #a18cd1);
+      border-radius: 2px;
     }
     
     /* About Text */
     .about-text p {
-      margin-bottom: 15px;
-      text-align: justify;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
     
     .highlight {
       color: var(--primary-color);
-      font-weight: 500;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--primary-light);
+      z-index: -1;
     }
     
     /* Contact Info */
     .contact-info {
-      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .contact-info i {
+      width: 30px;
+      color: var(--primary-color);
+      font-size: 1.1rem;
     }
     
     /* Items */
     .item {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    
+    .item:last-child {
+      border-bottom: none;
     }
     
     .item-header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     
     .item-title {
       font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--dark-gray);
     }
     
     .item-date {
       color: var(--secondary-color);
+      font-size: 0.9rem;
+      background: var(--light-gray);
+      padding: 3px 10px;
+      border-radius: 20px;
     }
     
     .item-subtitle {
       color: var(--secondary-color);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
     }
     
     .item-list {
@@ -219,29 +364,32 @@
     }
     
     .item-list li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       position: relative;
+      line-height: 1.6;
     }
     
     .item-list li::before {
-      content: "•";
+      content: "▹";
       color: var(--primary-color);
       position: absolute;
-      left: -15px;
+      left: -20px;
     }
     
     /* Project Cards */
     .project-card {
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: var(--transition);
       background: white;
-      padding: 20px;
+      padding: 25px;
       border-radius: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      border-left: 4px solid var(--primary-color);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
     
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
     
     /* Skills */
@@ -253,16 +401,31 @@
     
     .skill-category {
       flex: 1;
-      min-width: 200px;
-      background: var(--light-gray);
-      padding: 15px;
-      border-radius: 5px;
+      min-width: 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-top: 3px solid var(--primary-color);
+      transition: var(--transition);
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     
     .skill-title {
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: var(--primary-color);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .skill-title i {
+      margin-right: 10px;
     }
     
     /* Back to Top Button */
@@ -277,52 +440,142 @@
       background-color: var(--primary-color);
       color: white;
       cursor: pointer;
-      padding: 12px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      font-size: 18px;
-      transition: all 0.3s;
+      font-size: 1.2rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     #back-to-top:hover {
-      background-color: #1a3d7c;
-      transform: scale(1.1);
+      background-color: #3a56d4;
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
     
-    /* Availability Badge */
-    .availability-badge {
-      position: absolute;
-      bottom: -10px;
-      right: -10px;
-      background: white;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: var(--dark-gray);
+      color: white;
+      margin-top: 50px;
     }
     
-    /* Responsive */
-    @media (max-width: 768px) {
+    footer p {
+      margin: 0;
+    }
+    
+    .social-links {
+      margin-top: 15px;
+    }
+    
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      color: var(--primary-light);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
       .profile-section {
-        flex-direction: column;
-        text-align: center;
+        gap: 30px;
       }
       
       .profile-photo {
-        margin-right: 0;
-        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+      }
+      
+      .profile-name {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
       }
       
       .navbar-nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 80px);
+        background: white;
         flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        transition: var(--transition);
+      }
+      
+      .navbar-nav.active {
+        left: 0;
       }
       
       .nav-item {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin: 15px 0;
       }
       
-      .skills-container {
+      .profile-section {
         flex-direction: column;
+        text-align: center;
+        gap: 25px;
+      }
+      
+      .profile-photo {
+        margin-bottom: 15px;
+      }
+      
+      .profile-links {
+        justify-content: center;
+      }
+      
+      .section {
+        padding: 25px 20px;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .profile-name {
+        font-size: 1.8rem;
+      }
+      
+      .profile-title {
+        font-size: 1rem;
+      }
+      
+      .profile-links {
+        gap: 10px;
+      }
+      
+      .profile-link {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+      
+      .item-header {
+        flex-direction: column;
+      }
+      
+      .item-date {
+        align-self: flex-start;
       }
     }
     
@@ -333,22 +586,35 @@
         color: black !important;
         font-size: 12pt;
       }
+      
       .navbar, footer, #back-to-top {
         display: none !important;
       }
+      
       a {
         color: black !important;
         text-decoration: none !important;
       }
+      
       .section {
         page-break-inside: avoid;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 30px !important;
       }
+      
       .profile-section {
         flex-direction: row !important;
       }
+      
       .container {
         max-width: 100%;
         padding: 0 10mm;
+      }
+      
+      .profile-link {
+        background: none !important;
+        padding: 0 !important;
       }
     }
   </style>
@@ -356,24 +622,27 @@
 
 <body>
   <!-- Back to Top Button -->
-  <button id="back-to-top" title="Go to top">↑</button>
+  <button id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <a class="navbar-brand" href="#">Vaishali Sharma</a>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#organizations">Organizations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certificates">Certifications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
-        </ul>
+    <div class="container navbar-container">
+      <a class="navbar-brand" href="#"><i class="fas fa-chart-line"></i>Vaishali Sharma</a>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
       </div>
+      
+      <ul class="navbar-nav" id="navbar-menu">
+        <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-home"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#organizations"><i class="fas fa-users"></i> Organizations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates"><i class="fas fa-certificate"></i> Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#languages"><i class="fas fa-language"></i> Languages</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -383,17 +652,18 @@
       <!-- About Section -->
       <section id="about" class="section">
         <div class="profile-section">
-          <div style="position: relative;">
+          <div class="profile-photo-container">
             <img src="https://yuu2430.github.io/1745084937419.jpeg" alt="Vaishali Sharma" class="profile-photo">
+            <div class="availability-badge">Open for Internships</div>
           </div>
           <div class="profile-info">
             <h1 class="profile-name">Vaishali Sharma</h1>
             <p class="profile-title">MSc Student in Statistics<br>Maharaja Sayajirao University of Baroda</p>
             <div class="profile-links">
-                <a href="https://yuu2430.github.io/VAISHALI CV.pdf">CV</a>
-              |  <a href="https://vai2430.carrd.co">Portfolio</a>
-              |  <a href="https://linkedin.com/in/vai2430">LinkedIn</a>
-              |  <a href="https://github.com/yuu2430">GitHub</a>
+              <a href="https://yuu2430.github.io/VAISHALI CV.pdf" class="profile-link" target="_blank"><i class="fas fa-file-alt"></i> CV</a>
+              <a href="https://vai2430.carrd.co" class="profile-link" target="_blank"><i class="fas fa-palette"></i> Portfolio</a>
+              <a href="https://linkedin.com/in/vai2430" class="profile-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="https://github.com/yuu2430" class="profile-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
@@ -410,9 +680,18 @@
       <!-- Contact Section -->
       <section id="contact" class="section">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-info"><strong>Phone:</strong> +91 8160173096</p>
-        <p class="contact-info"><strong>Email:</strong> vaishalis2430@gmail.com</p>
-        <p class="contact-info"><strong>Location:</strong> Vadodara, India</p>
+        <div class="contact-info">
+          <i class="fas fa-phone"></i>
+          <span><strong>Phone:</strong> +91 8160173096</span>
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-envelope"></i>
+          <span><strong>Email:</strong> vaishalis2430@gmail.com</span>
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-map-marker-alt"></i>
+          <span><strong>Location:</strong> Vadodara, India</span>
+        </div>
       </section>
 
       <!-- Education Section -->
@@ -474,8 +753,6 @@
           </div>
           <div class="item-subtitle">Department of Psychology, Maharaja Sayajirao University | Vadodara, Gujarat, India | <a href="https://yuu2430.github.io/lor psychology .pdf" style="color: var(--primary-color);">LOR</a></div>
           <ul class="item-list">
-          <div class="item-subtitle">Department of Psychology, Maharaja Sayajirao University | Vadodara, Gujarat, India</div>
-          <ul class="item-list">
             <li>Taught 130+ students Animation in Psychology & Art Minor, integrating real-world datasets</li>
             <li>Trained students in Blender for 2D, achieving a 95% project completion rate</li>
             <li>Redesigned course materials, reducing student queries on assignments by 30%</li>
@@ -489,8 +766,6 @@
           </div>
           <div class="item-subtitle"><a href="https://vaiportfolio.carrd.co/" style="color: var(--primary-color);">Portfolio</a> | X, Instagram, Upwork</div>
           <ul class="item-list">
-          <div class="item-subtitle">X, Instagram, Upwork</div>
-          <ul class="item-list">
             <li>Worked as content creator, building an organic audience of 5.7K+ followers through fan art</li>
             <li>One post reached 514K impressions and 65K+ engagements on X</li>
             <li>Delivered 20+ customized artworks to clients across 5+ countries</li>
@@ -503,8 +778,6 @@
             <span class="item-date">08/2021 – 11/2021</span>
           </div>
           <div class="item-subtitle">Social Goofy | Work from Home | <a href="https://yuu2430.github.io/Vaishali Internship Completion Letter (1).pdf" style="color: var(--primary-color);">LOR</a></div>
-          <ul class="item-list">
-          <div class="item-subtitle">Social Goofy | Work from Home</div>
           <ul class="item-list">
             <li>Produced 50+ visuals and 10+ videos using Adobe Illustrator, Photoshop, and After Effects</li>
             <li>Designed comprehensive branding packages aligned with client objectives</li>
@@ -560,7 +833,7 @@
         <h2 class="section-title">Skills</h2>
         <div class="skills-container">
           <div class="skill-category">
-            <div class="skill-title">Data Tools</div>
+            <div class="skill-title"><i class="fas fa-chart-bar"></i> Data Tools</div>
             <ul class="item-list">
               <li>Tableau</li>
               <li>Excel</li>
@@ -569,7 +842,7 @@
           </div>
           
           <div class="skill-category">
-            <div class="skill-title">Programming & Analysis</div>
+            <div class="skill-title"><i class="fas fa-laptop-code"></i> Programming & Analysis</div>
             <ul class="item-list">
               <li>Python (Pandas, NumPy, Matplotlib, NLTK)</li>
               <li>R (ggplot2, dplyr)</li>
@@ -577,7 +850,7 @@
           </div>
           
           <div class="skill-category">
-            <div class="skill-title">Design Tools</div>
+            <div class="skill-title"><i class="fas fa-paint-brush"></i> Design Tools</div>
             <ul class="item-list">
               <li>Adobe Photoshop</li>
               <li>Illustrator</li>
@@ -605,7 +878,7 @@
 
       <!-- Certificates Section -->
       <section id="certificates" class="section">
-        <h2 class="section-title">Certificates</h2>
+        <h2 class="section-title">Certifications</h2>
         <ul class="item-list">
           <li>Statistics 101 - IBM</li>
           <li>OneRoadMap - Data Analytics</li> 
@@ -630,19 +903,50 @@
     </div>
   </div>
 
-  <footer style="text-align: center; padding: 20px; background: var(--light-gray); margin-top: 50px;">
+  <footer>
     <p>&copy; 2024 Vaishali Sharma. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/vai2430" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yuu2430" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://vai2430.carrd.co" target="_blank"><i class="fas fa-palette"></i></a>
+      <a href="mailto:vaishalis2430@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
   </footer>
 
   <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.menu-toggle');
+    const navbarMenu = document.querySelector('.navbar-nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navbarMenu.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
     // Back to top button
     const backToTopButton = document.getElementById("back-to-top");
     
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 300) {
-        backToTopButton.style.display = "block";
+        backToTopButton.style.display = "flex";
       } else {
         backToTopButton.style.display = "none";
+      }
+      
+      // Add shadow to navbar when scrolling
+      if (window.pageYOffset > 50) {
+        document.querySelector('.navbar').classList.add('scrolled');
+      } else {
+        document.querySelector('.navbar').classList.remove('scrolled');
       }
     });
     
@@ -650,16 +954,50 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
     
-    // Profile photo animation
-    const profilePhoto = document.querySelector('.profile-photo');
-    if (profilePhoto) {
-      profilePhoto.addEventListener('mouseenter', () => {
-        profilePhoto.style.transform = 'rotate(5deg)';
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const navbarHeight = document.querySelector('.navbar').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
-      profilePhoto.addEventListener('mouseleave', () => {
-        profilePhoto.style.transform = 'rotate(0deg)';
+    });
+    
+    // Add animation to sections when they come into view
+    const sections = document.querySelectorAll('.section');
+    
+    const observerOptions = {
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
       });
-    }
+    }, observerOptions);
+    
+    sections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(section);
+    });
   </script>
 </body>
 </html>
