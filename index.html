@@ -74,7 +74,7 @@
             margin: 8px 0;
         }
         
-        .education-item, .experience-item {
+        .education-item, .experience-item, .project-item {
             margin-bottom: 20px;
         }
         
@@ -114,6 +114,33 @@
             left: -15px;
         }
         
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 5px;
+            font-size: 14.5px;
+        }
+        
         @media (max-width: 768px) {
             body {
                 padding: 25px;
@@ -126,6 +153,10 @@
             
             .item-date {
                 margin-top: 3px;
+            }
+            
+            .skills-container {
+                flex-direction: column;
             }
         }
     </style>
@@ -254,6 +285,141 @@
         </div>
     </section>
     
-    <!-- Add Projects, Skills, Certificates etc. following the same pattern -->
+    <hr class="divider">
+    
+    <!-- Projects -->
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">Sentiment Analysis of MSU students on Trending Topics</span>
+                <span class="item-date">12/2024 – 04/2025</span>
+            </div>
+            <div class="item-subtitle">M.Sc. Team Project | <a href="#" style="color: var(--primary-color);">GitHub</a></div>
+            <ul class="item-list">
+                <li>Devised an 81% accuracy sentiment analyzer through machine learning concepts, leveraging NLTK and scikit-learn</li>
+                <li>Collected and transcribed audio responses from 316 MSU students to create a dataset</li>
+                <li>Developed sentiment analysis model using Python and NLTK to classify 317 student feedback entries</li>
+            </ul>
+        </div>
+        
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">Statistical Detective Game</span>
+                <span class="item-date">03/2025</span>
+            </div>
+            <div class="item-subtitle">Volunteer Project | <a href="#" style="color: var(--primary-color);">GitHub</a></div>
+            <ul class="item-list">
+                <li>Developed Python program game for department's open house with randomly generated data</li>
+                <li>Players solve mysteries by interpreting clues and applying basic statistics</li>
+            </ul>
+        </div>
+        
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">Women Empowerment & Livelihood Study</span>
+                <span class="item-date">12/2023 – 04/2024</span>
+            </div>
+            <div class="item-subtitle">B.Sc. Team Project | <a href="#" style="color: var(--primary-color);">GitHub</a></div>
+            <ul class="item-list">
+                <li>Data cleaning of 1,664 unstructured records by AATAPI Foundation (income, loans, demographics)</li>
+                <li>Translated vernacular data into analyzable formats, enabling team-wide consistency</li>
+                <li>Executed Chi-square tests in R to isolate key relationships (education vs. savings)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Skills -->
+    <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <div class="skill-title">Data Tools</div>
+                <ul class="skill-list">
+                    <li>Tableau</li>
+                    <li>Excel</li>
+                    <li>Statistical Methods</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-title">Programming & Analysis</div>
+                <ul class="skill-list">
+                    <li>Python (Pandas, NumPy, Matplotlib, NLTK)</li>
+                    <li>R (ggplot2, dplyr)</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-title">Design Tools</div>
+                <ul class="skill-list">
+                    <li>Adobe Photoshop</li>
+                    <li>Illustrator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Organizations -->
+    <section>
+        <h2 class="section-title">Organizations</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="item-title">NSS, Student</span>
+                <span class="item-date">12/2022 – 04/2023</span>
+            </div>
+            <div class="item-subtitle">Vadodara, Gujarat, India</div>
+            <ul class="item-list">
+                <li>Completed 4-month National Service Scheme (NSS) volunteer program</li>
+                <li>Volunteered at old-age homes providing support and companionship</li>
+                <li>Coordinated blood donation campaign for Department of Computer Applications</li>
+                <li>Conducted community surveys to identify areas needing development</li>
+            </ul>
+        </div>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Certificates -->
+    <section>
+        <h2 class="section-title">Certificates</h2>
+        <ul class="item-list">
+            <li>Statistics 101 — IBM Data Analytics</li>
+            <li>OneRoadMap Quantitative Research Virtual Experience Program — JPMorgan Chase & Co.</li>
+            <li>AI for Beginners — HP LIFE</li>
+            <li>Data Science & Analytics — HP LIFE</li>
+            <li>ESG Job Simulation — TATA group</li>
+            <li>Data Analytics Job Simulation — Deloitte Australia</li>
+        </ul>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Courses -->
+    <section>
+        <h2 class="section-title">Courses</h2>
+        <div class="education-item">
+            <div class="item-header">
+                <span class="item-title">Visual Content Development</span>
+                <span class="item-date">08/2020 – 08/2021</span>
+            </div>
+            <div class="item-subtitle">Arena Animation | Vadodara, Gujarat</div>
+        </div>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Languages -->
+    <section>
+        <h2 class="section-title">Languages</h2>
+        <ul class="item-list">
+            <li>English</li>
+            <li>Hindi</li>
+        </ul>
+    </section>
 </body>
 </html>
