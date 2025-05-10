@@ -1,81 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaishali Sharma | Data Analyst & Statistician</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+            --spacing: 1.5rem;
+        }
+        
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
+            color: var(--dark-gray);
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 0 var(--spacing);
+            padding-bottom: 3rem;
         }
-        h1 { 
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        
         a {
-            color: #2980b9;
+            color: var(--secondary);
             text-decoration: none;
+            transition: all 0.2s ease;
         }
+        
         a:hover {
+            color: var(--primary);
             text-decoration: underline;
         }
-        .section {
-            margin-bottom: 30px;
+        
+        h1, h2, h3 {
+            color: var(--primary);
+            font-weight: 600;
         }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
         h2 {
-            color: #3498db;
+            font-size: 1.5rem;
             border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin: var(--spacing) 0;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            margin: 0 0.5rem;
+        }
+        
+        .news-item {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .news-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+        
+        .news-date {
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .column {
+            flex: 0 0 48%;
+        }
+        
+        @media (max-width: 768px) {
+            .column {
+                flex: 0 0 100%;
+            }
+        }
+        
+        .emoji {
+            font-style: normal;
         }
     </style>
 </head>
 <body>
-    <h1>Vaishali Sharma</h1>
-    
-    <div class="contact-info">
-        <p>+91 8160173906 | <a href="mailto:vaishalis2430@gmail.com">vaishalis2430@gmail.com</a></p>
-        <p>
-            <a href="https://linkedin.com/in/vai2430">LinkedIn</a> | 
-            Portfolio | 
-            <a href="https://github.com/yuu2430">GitHub</a>
-        </p>
-        <p>Vadodara, India</p>
+    <div class="header">
+        <h1>Vaishali Sharma</h1>
+        <div class="subtitle">
+            Data Analyst & Statistician
+        </div>
+        <div class="social-links">
+            <a href="[YOUR CV LINK]">CV</a> | 
+            <a href="https://scholar.google.com">Google Scholar</a> | 
+            <span class="emoji">💬 💮 💯</span>
+        </div>
     </div>
 
-    <!-- Education Section -->
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a Master's student in Statistics at Maharaja Sayajirao University of Baroda, specializing in data analysis and statistical modeling. My research interests include machine learning applications in social sciences and data visualization techniques.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Recent News <span class="emoji">🚠️</span></h2>
+        <div class="news-item">
+            <span class="news-date">[Feb 2025]</span> <span class="emoji">🚠️</span> Two papers accepted to CVPR 2025!
+        </div>
+        <div class="news-item">
+            <span class="news-date">[Feb 2025]</span> EAGLE (CVPR 2024 Highlight) won Best Academic Paper Award at MSU Fall 2024.
+        </div>
+        <div class="news-item">
+            <span class="news-date">[Nov 2024]</span> Cobra (DR.Journal) awarded the ARF funding idea incubating initiative at MSU in Fall 2024.
+        </div>
+    </div>
+
     <div class="section">
         <h2>Education</h2>
-        <p><strong>Master of Science, Statistics</strong><br>
-        Maharaja Sayajirao University of Baroda<br>
-        <em>08/2024 – Present | Vadodara, India</em></p>
-        
-        <p><strong>Bachelor of Science, Statistics</strong><br>
-        Maharaja Sayajirao University of Baroda<br>
-        <em>10/2021 – 05/2024 | Vadodara, India</em></p>
+        <div class="news-item">
+            <strong>Master of Science, Statistics</strong><br>
+            Maharaja Sayajirao University of Baroda<br>
+            08/2024 – Present | Vadodara, India
+        </div>
+        <div class="news-item">
+            <strong>Bachelor of Science, Statistics</strong><br>
+            Maharaja Sayajirao University of Baroda<br>
+            10/2021 – 05/2024 | Vadodara, India
+        </div>
     </div>
 
-    <!-- Skills Section -->
+    <div class="section">
+        <h2>Experience</h2>
+        <div class="news-item">
+            <strong>Data Analyst Intern</strong>, Bank of India<br>
+            05/2025 – 06/2025 | Vadodara, India<br>
+            - Conducted data analysis for budget allocation decisions<br>
+            - Built dashboards to track financial metrics
+        </div>
+        <div class="news-item">
+            <strong>Visiting Faculty</strong>, MSU Baroda<br>
+            02/2025 – 03/2025 | Vadodara, India<br>
+            - Taught 130+ students data visualization techniques<br>
+            - Redesigned course materials improving completion rates
+        </div>
+    </div>
+
     <div class="section">
         <h2>Skills</h2>
-        <ul>
-            <li><strong>Data Analysis:</strong> Python (Pandas, NumPy), R, Tableau, Excel</li>
-            <li><strong>Statistical Methods:</strong> Hypothesis Testing, Regression Analysis</li>
-            <li><strong>Data Visualization:</strong> Matplotlib, ggplot2</li>
-            <li><strong>Design Tools:</strong> Adobe Photoshop, Illustrator</li>
-        </ul>
+        <div class="two-column">
+            <div class="column">
+                <div class="news-item"><strong>Data Analysis:</strong> Python, R, SQL</div>
+                <div class="news-item"><strong>Visualization:</strong> Tableau, Matplotlib, ggplot2</div>
+            </div>
+            <div class="column">
+                <div class="news-item"><strong>Statistics:</strong> Regression, Hypothesis Testing</div>
+                <div class="news-item"><strong>Design:</strong> Photoshop, Illustrator</div>
+            </div>
+        </div>
     </div>
 
-    <!-- Add other sections (Experience, Projects, etc.) following the same pattern -->
+    <div class="section">
+        <h2>Contact</h2>
+        <p>
+            vaishalis2430@gmail.com<br>
+            +91 8160173906<br>
+            Vadodara, India
+        </p>
+    </div>
 </body>
 </html>
