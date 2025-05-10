@@ -10,7 +10,6 @@
         :root {
             --primary-color: #2a5db0;
             --secondary-color: #555;
-            --light-gray: #f8f9fa;
             --border-color: #eee;
         }
         
@@ -18,99 +17,31 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
-            margin: 0;
-            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
             background-color: #fff;
-        }
-        
-        /* Fixed Header */
-        .fixed-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 15px 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
         
         .header-name {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 700;
-            margin: 0;
+            margin-bottom: 5px;
         }
         
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            font-size: 15px;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* Main Content */
-        .main-content {
-            margin-top: 80px;
-            padding: 40px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Profile Section */
         .profile-section {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 40px;
-            align-items: flex-start;
-        }
-        
-        .profile-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: #f0f0f0;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-        
-        .profile-info {
-            flex: 1;
-        }
-        
-        .profile-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0 0 5px 0;
+            margin-bottom: 30px;
         }
         
         .profile-title {
             font-weight: 500;
-            margin: 0 0 5px 0;
             color: var(--secondary-color);
-        }
-        
-        .profile-affiliation {
             margin: 0 0 15px 0;
-            color: var(--secondary-color);
         }
         
         .profile-links {
-            margin-top: 10px;
+            margin: 15px 0;
         }
         
         .profile-links a {
@@ -120,7 +51,6 @@
             margin-right: 15px;
         }
         
-        /* Divider */
         .divider {
             border: none;
             height: 1px;
@@ -128,50 +58,11 @@
             margin: 30px 0;
         }
         
-        /* News Section */
-        .news-section {
-            margin-bottom: 40px;
-        }
-        
-        .news-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .news-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .news-item {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .news-item::before {
-            content: "•";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-        
-        .news-date {
-            font-weight: 500;
-        }
-        
-        /* About Section */
-        .about-section {
-            margin-bottom: 40px;
-        }
-        
-        .about-text p {
-            margin-bottom: 15px;
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 30px 0 15px 0;
         }
         
         .highlight {
@@ -179,180 +70,190 @@
             font-weight: 500;
         }
         
-        /* Contact Section */
-        .contact-section {
-            margin-bottom: 40px;
+        .contact-info {
+            margin: 8px 0;
         }
         
-        .contact-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .education-item, .experience-item {
+            margin-bottom: 20px;
         }
         
-        .contact-list li {
-            margin-bottom: 8px;
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
         }
         
-        /* Education Section */
-        .education-section {
-            margin-bottom: 40px;
-        }
-        
-        .education-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .education-item {
-            margin-bottom: 15px;
-        }
-        
-        .education-degree {
+        .item-title {
             font-weight: 600;
         }
         
-        .education-date {
+        .item-date {
             color: var(--secondary-color);
             font-size: 14px;
         }
         
-        .education-school {
+        .item-subtitle {
             color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+        
+        .item-list {
+            padding-left: 20px;
+        }
+        
+        .item-list li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .item-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: -15px;
         }
         
         @media (max-width: 768px) {
-            .fixed-header {
-                padding: 15px 20px;
+            body {
+                padding: 25px;
+            }
+            
+            .item-header {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+                gap: 3px;
             }
             
-            .nav-links {
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-            
-            .main-content {
-                padding: 20px;
-                margin-top: 120px;
-            }
-            
-            .profile-section {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .profile-info {
-                text-align: center;
-            }
-            
-            .profile-links a {
-                margin: 0 8px;
+            .item-date {
+                margin-top: 3px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Fixed Header -->
-    <header class="fixed-header">
+    <!-- Header Section -->
+    <header>
         <h1 class="header-name">Vaishali Sharma</h1>
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#publications">Publications</a>
-            <a href="#activities">Activities</a>
-            <a href="#awards">Awards</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#organizations">Organizations</a>
-            <a href="#languages">Languages</a>
-        </nav>
+        <div class="profile-section">
+            <p class="profile-title">MSc Student in Statistics<br>Maharaja Sayajirao University of Baroda</p>
+            <div class="profile-links">
+                <a href="path/to/cv.pdf" target="_blank">CV</a>
+                <a href="https://vai2430.carrd.co" target="_blank">Portfolio</a>
+                <a href="https://linkedin.com/in/vai2430" target="_blank">LinkedIn</a>
+                <a href="https://github.com/vai2430" target="_blank">GitHub</a>
+            </div>
+        </div>
     </header>
     
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Profile Section -->
-        <section id="home" class="profile-section">
-            <img src="profile-photo.jpg" alt="Vaishali Sharma" class="profile-photo">
-            <div class="profile-info">
-                <h2 class="profile-name">Vaishali Sharma</h2>
-                <p class="profile-title">MSc Student in Statistics</p>
-                <p class="profile-affiliation">Maharaja Sayajirao University of Baroda</p>
-                <div class="profile-links">
-                    <a href="path/to/cv.pdf" target="_blank">CV</a>
-                    <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
-                    <a href="https://linkedin.com/in/vai2430" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/vai2430" target="_blank">GitHub</a>
-                </div>
+    <hr class="divider">
+    
+    <!-- Introduction -->
+    <section>
+        <p>I am currently pursuing my <span class="highlight">Master of Science in Statistics</span> at <span class="highlight">Maharaja Sayajirao University of Baroda</span>. My academic journey combines statistical expertise with practical data analysis skills and creative design capabilities.</p>
+        
+        <p>With experience in <span class="highlight">data analysis</span>, <span class="highlight">statistical modeling</span>, and <span class="highlight">data visualization</span>, I bring a unique interdisciplinary perspective to solving complex problems. My background in <span class="highlight">digital art and design</span> further enhances my ability to communicate data insights effectively.</p>
+        
+        <p>I am currently looking for a <span class="highlight">research internship position</span> for the summer of 2025!</p>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Contact -->
+    <section>
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-info">+91 8160173096</p>
+        <p class="contact-info">vaishalis2430@gmail.com</p>
+        <p class="contact-info">Vadodara, India</p>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Education -->
+    <section>
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <div class="item-header">
+                <span class="item-title">Master of Science, Statistics</span>
+                <span class="item-date">08/2024 – Present</span>
             </div>
-        </section>
+            <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
+        </div>
         
-        <hr class="divider">
+        <div class="education-item">
+            <div class="item-header">
+                <span class="item-title">Bachelor of Science, Statistics</span>
+                <span class="item-date">10/2021 – 05/2024</span>
+            </div>
+            <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
+        </div>
         
-        <!-- News Section -->
-        <section class="news-section">
-            <h3 class="news-title">Recent News</h3>
-            <ul class="news-list">
-                <li class="news-item">
-                    <span class="news-date">[Feb 2025]</span> Two papers have been accepted to CVPR 2025!
-                </li>
-                <li class="news-item">
-                    <span class="news-date">[Feb 2025]</span> EAGLE (CVPR 2024 Highlight) won Best Academic Paper Award at Yonsei University Fall 2024.
-                </li>
-                <li class="news-item">
-                    <span class="news-date">[Nov 2024]</span> Cobra (PR Journal) awarded the ARF funding idea invAbating Initiative at Yonsei University in Fall 2024.
-                </li>
+        <div class="education-item">
+            <div class="item-header">
+                <span class="item-title">SSC & HSC</span>
+                <span class="item-date"></span>
+            </div>
+            <div class="item-subtitle">Kendriya Vidyalaya No. 1 Ichhanath | Surat, Gujarat, India</div>
+        </div>
+    </section>
+    
+    <hr class="divider">
+    
+    <!-- Experience -->
+    <section>
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="item-title">Data Analyst Intern</span>
+                <span class="item-date">05/2025 – 06/2025</span>
+            </div>
+            <div class="item-subtitle">Bank of India | Vadodara, India</div>
+            <ul class="item-list">
+                <li>Conducted data analysis to support budget allocation decisions and optimize resource planning</li>
+                <li>Assisted in building dashboards for monitoring financial metrics, enhancing data visibility for decision-making</li>
+                <li>Supported market analysis by gathering insights on deposit trends and branch performance</li>
             </ul>
-        </section>
+        </div>
         
-        <hr class="divider">
-        
-        <!-- About Section -->
-        <section class="about-section">
-            <p>I am currently pursuing my <span class="highlight">Master of Science in Statistics</span> at <span class="highlight">Maharaja Sayajirao University of Baroda</span>. My academic journey combines statistical expertise with practical data analysis skills and creative design capabilities.</p>
-            
-            <p>With experience in <span class="highlight">data analysis</span>, <span class="highlight">statistical modeling</span>, and <span class="highlight">data visualization</span>, I bring a unique interdisciplinary perspective to solving complex problems. My background in <span class="highlight">digital art and design</span> further enhances my ability to communicate data insights effectively.</p>
-            
-            <p>I am currently looking for a <span class="highlight">research internship position</span> for the summer of 2025!</p>
-        </section>
-        
-        <hr class="divider">
-        
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h3 class="news-title">Contact</h3>
-            <ul class="contact-list">
-                <li>vaishalis2430@gmail.com</li>
-                <li>Department of Statistics, Maharaja Sayajirao University of Baroda, Vadodara, India</li>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="item-title">Visiting Faculty</span>
+                <span class="item-date">02/2025 – 03/2025</span>
+            </div>
+            <div class="item-subtitle">Department of Psychology, Maharaja Sayajirao University | Vadodara, Gujarat, India</div>
+            <ul class="item-list">
+                <li>Taught 130+ students Animation in Psychology & Art Minor, integrating real-world datasets</li>
+                <li>Trained students in Blender for 2D, achieving a 95% project completion rate</li>
+                <li>Redesigned course materials, reducing student queries on assignments by 30%</li>
             </ul>
-        </section>
+        </div>
         
-        <hr class="divider">
-        
-        <!-- Education Section -->
-        <section class="education-section">
-            <h3 class="news-title">Education</h3>
-            <ul class="education-list">
-                <li class="education-item">
-                    <div class="education-degree">MSc in Statistics</div>
-                    <div class="education-date">2024 - Present</div>
-                    <div class="education-school">Maharaja Sayajirao University of Baroda, Vadodara</div>
-                </li>
-                <li class="education-item">
-                    <div class="education-degree">BSc in Statistics</div>
-                    <div class="education-date">2021 - 2024</div>
-                    <div class="education-school">Maharaja Sayajirao University of Baroda, Vadodara</div>
-                </li>
-                <li class="education-item">
-                    <div class="education-degree">SSC & HSC</div>
-                    <div class="education-school">Kendriya Vidyalaya No. 1 Ichhanath, Surat</div>
-                </li>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="item-title">Freelance Digital Artist</span>
+                <span class="item-date">02/2021 – 05/2023</span>
+            </div>
+            <div class="item-subtitle">X, Instagram, Upwork</div>
+            <ul class="item-list">
+                <li>Worked as content creator, building an organic audience of 5.7K+ followers through fan art</li>
+                <li>One post reached 514K impressions and 65K+ engagements on X</li>
+                <li>Delivered 20+ customized artworks to clients across 5+ countries</li>
             </ul>
-        </section>
+        </div>
         
-        <!-- Add other sections (Experience, Projects, etc.) following the same pattern -->
-    </div>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="item-title">Graphic Design Intern</span>
+                <span class="item-date">08/2021 – 11/2021</span>
+            </div>
+            <div class="item-subtitle">Social Goofy | Work from Home</div>
+            <ul class="item-list">
+                <li>Produced 30+ visuals and 10+ videos using Adobe Illustrator, Photoshop, and After Effects</li>
+                <li>Designed comprehensive branding packages aligned with client objectives</li>
+                <li>Completed 100% of projects on time while maintaining high-quality standards</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Add Projects, Skills, Certificates etc. following the same pattern -->
 </body>
 </html>
