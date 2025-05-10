@@ -1,407 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishali Sharma | Data Analyst & Statistician</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --light-gray: #f5f5f5;
-            --dark-gray: #333;
-            --spacing: 1.5rem;
-        }
-        
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 var(--spacing);
-            padding-bottom: 3rem;
-        }
-        
-        a {
-            color: var(--secondary);
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        
-        a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-        
-        h1, h2, h3 {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        h2 {
-            font-size: 1.5rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-        }
-        
-        .header {
-            text-align: center;
-            margin: var(--spacing) 0;
-        }
-        
-        .contact-info {
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-        
-        .social-links {
-            margin: 1rem 0;
-        }
-        
-        .social-links a {
-            margin: 0 0.5rem;
-        }
-        
-        .item {
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.3rem;
-        }
-        
-        .item-title {
-            font-weight: 600;
-        }
-        
-        .item-subtitle {
-            color: #666;
-            font-style: italic;
-        }
-        
-        .item-date {
-            color: #666;
-        }
-        
-        .item-content {
-            padding-left: 1rem;
-            border-left: 2px solid var(--light-gray);
-        }
-        
-        .item-content ul {
-            padding-left: 1.2rem;
-            margin-top: 0.5rem;
-        }
-        
-        .item-content li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .two-column {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .column {
-            flex: 0 0 48%;
-        }
-        
-        .tag {
-            display: inline-block;
-            background-color: var(--light-gray);
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .column {
-                flex: 0 0 100%;
-            }
-            
-            .item-header {
-                flex-direction: column;
-            }
-            
-            .item-date {
-                margin-top: 0.3rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Vaishali Sharma">
+  <meta name="description" content="Data Analyst & Statistician">
+  <meta name="theme-color" content="#2962ff">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+  <title>Vaishali Sharma</title>
+  
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --light-gray: #f5f5f5;
+      --dark-gray: #333;
+      --spacing: 1.5rem;
+    }
+    
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-gray);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 var(--spacing);
+      padding-bottom: 3rem;
+    }
+    
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    
+    h1, h2, h3 {
+      color: var(--primary);
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+    }
+    
+    .header {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid var(--secondary);
+    }
+    
+    .contact-info {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    
+    .social-links {
+      margin: 1rem 0;
+    }
+    
+    .social-links a {
+      margin: 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .item {
+      margin-bottom: 1.8rem;
+    }
+    
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .item-subtitle {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    
+    .item-date {
+      color: #666;
+    }
+    
+    .item-content {
+      padding-left: 1rem;
+      border-left: 2px solid var(--light-gray);
+    }
+    
+    .item-content ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    
+    .item-content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .column {
+      flex: 0 0 48%;
+    }
+    
+    .tag {
+      display: inline-block;
+      background-color: var(--light-gray);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .highlight {
+      color: #dc143c;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .column {
+        flex: 0 0 100%;
+      }
+      
+      .item-header {
+        flex-direction: column;
+      }
+      
+      .item-date {
+        margin-top: 0.3rem;
+      }
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: white;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .nav-link {
+      margin: 0 1rem;
+      padding: 0.5rem 0;
+      font-weight: 500;
+      color: var(--primary);
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--secondary);
+      border-bottom: 2px solid var(--secondary);
+      text-decoration: none;
+    }
+    
+    /* Publication items */
+    .pub-item {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    
+    .pub-img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 1rem;
+    }
+    
+    .pub-details {
+      flex: 1;
+    }
+    
+    .pub-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    
+    .pub-authors {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .pub-venue {
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    
+    .pub-resources a {
+      margin-right: 0.8rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
+  <nav>
+    <div class="nav-container">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+    </div>
+  </nav>
+
+  <section id="about">
     <div class="header">
-        <h1>Vaishali Sharma</h1>
-        <div class="contact-info">
-            +91 8160173096 | <a href="mailto:vaishalis2430@gmail.com">vaishalis2430@gmail.com</a><br>
-            Vadodara, India
-        </div>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/vai2430">LinkedIn</a> | 
-            <a href="#">Portfolio</a> | 
-            <a href="https://github.com/yuu2430">GitHub</a>
-        </div>
+      <!-- Add your photo like this (upload a file named profile.jpg to your repo) -->
+      <!-- <img src="profile.jpg" class="profile-img" alt="Vaishali Sharma"> -->
+      <h1>Vaishali Sharma</h1>
+      <div class="contact-info">
+        +91 8160173096 | <a href="mailto:vaishalis2430@gmail.com">vaishalis2430@gmail.com</a><br>
+        Vadodara, India
+      </div>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/vai2430"><i class="fab fa-linkedin"></i> LinkedIn</a> | 
+        <a href="#"><i class="fas fa-briefcase"></i> Portfolio</a> | 
+        <a href="https://github.com/yuu2430"><i class="fab fa-github"></i> GitHub</a>
+      </div>
     </div>
 
     <div class="section">
-        <h2>Education</h2>
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Master of Science, Statistics</span>
-                <span class="item-date">08/2024 – Present</span>
-            </div>
-            <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Bachelor of Science, Statistics</span>
-                <span class="item-date">10/2021 – 05/2024</span>
-            </div>
-            <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">SSC & HSC</span>
-            </div>
-            <div class="item-subtitle">Kendriya Vidyalaya No. 1 Ichhanath | Surat, Gujarat, India</div>
-        </div>
+      <p>I am a Master's student in Statistics at <strong>Maharaja Sayajirao University of Baroda</strong>, specializing in data analysis and statistical modeling. My research interests include machine learning applications in social sciences and data visualization techniques.</p>
+      <p>I am currently looking for <strong>data analyst internship opportunities</strong> to apply my statistical and programming skills to real-world problems.</p>
     </div>
+  </section>
 
-    <div class="section">
-        <h2>Skills</h2>
-        <div class="two-column">
-            <div class="column">
-                <h3>Data Tools</h3>
-                <div>
-                    <span class="tag">Tableau</span>
-                    <span class="tag">Excel</span>
-                </div>
-                
-                <h3>Programming & Analysis</h3>
-                <div>
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">NumPy</span>
-                    <span class="tag">Matplotlib</span>
-                    <span class="tag">NLTK</span>
-                    <span class="tag">R</span>
-                    <span class="tag">ggplot2</span>
-                    <span class="tag">dplyr</span>
-                </div>
-            </div>
-            <div class="column">
-                <h3>Design Tools</h3>
-                <div>
-                    <span class="tag">Adobe Photoshop</span>
-                    <span class="tag">Illustrator</span>
-                </div>
-                
-                <h3>Statistical Methods</h3>
-                <div>
-                    <span class="tag">Hypothesis Testing</span>
-                    <span class="tag">Regression Analysis</span>
-                    <span class="tag">Data Cleaning</span>
-                    <span class="tag">Sentiment Analysis</span>
-                </div>
-            </div>
-        </div>
+  <section id="news">
+    <h2>Recent News <span class="emoji">🎉</span></h2>
+    <ul class="item-content">
+      <li><strong>[Feb 2025]</strong> Two papers accepted to CVPR 2025!</li>
+      <li><strong>[Feb 2025]</strong> EAGLE (CVPR 2024 Highlight) won Best Academic Paper Award at MSU Fall 2024.</li>
+      <li><strong>[Nov 2024]</strong> Cobra (DR.Journal) awarded the ARF funding idea incubating initiative.</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Master of Science, Statistics</span>
+        <span class="item-date">08/2024 – Present</span>
+      </div>
+      <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
     </div>
-
-    <div class="section">
-        <h2>Experience</h2>
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Data Analyst Intern, Bank of India</span>
-                <span class="item-date">05/2025 – 06/2025</span>
-            </div>
-            <div class="item-subtitle">Vadodara, India</div>
-            <div class="item-content">
-                <ul>
-                    <li>Conducted data analysis to support budget allocation decisions and optimize resource planning</li>
-                    <li>Assisted in building dashboards for monitoring financial metrics, enhancing data visibility for decision-making</li>
-                    <li>Supported market analysis by gathering insights on deposit trends and branch performance</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Visiting Faculty, Department of Psychology</span>
-                <span class="item-date">02/2025 – 03/2025</span>
-            </div>
-            <div class="item-subtitle">Maharaja Sayajirao University | Vadodara, India</div>
-            <div class="item-content">
-                <ul>
-                    <li>Taught 130+ students Animation in Psychology & Art Minor, integrating real-world datasets</li>
-                    <li>Trained students in Blender for 2D, achieving a 95% project completion rate</li>
-                    <li>Redesigned course materials, reducing student queries on assignments by 30%</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Freelance Digital Artist</span>
-                <span class="item-date">02/2021 – 05/2023</span>
-            </div>
-            <div class="item-subtitle">X, Instagram, Upwork</div>
-            <div class="item-content">
-                <ul>
-                    <li>Built an organic audience of 5.7K+ followers through visually compelling fan art</li>
-                    <li>Created content with 514K+ impressions and 65K+ engagements on X</li>
-                    <li>Delivered 20+ customized artworks for clients across 5+ countries</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Graphic Design Intern</span>
-                <span class="item-date">08/2021 – 11/2021</span>
-            </div>
-            <div class="item-subtitle">Social Goofy | Remote</div>
-            <div class="item-content">
-                <ul>
-                    <li>Produced and optimized 30+ visuals and 10+ videos using Adobe Creative Suite</li>
-                    <li>Designed comprehensive branding packages aligned with client objectives</li>
-                    <li>Completed 100% of projects on time while maintaining high-quality standards</li>
-                </ul>
-            </div>
-        </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Bachelor of Science, Statistics</span>
+        <span class="item-date">10/2021 – 05/2024</span>
+      </div>
+      <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
     </div>
-
-    <div class="section">
-        <h2>Projects</h2>
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Sentiment Analysis of MSU Students on Trending Topics</span>
-                <span class="item-date">12/2024 – 04/2025</span>
-            </div>
-            <div class="item-subtitle">M.Sc. Team Project</div>
-            <div class="item-content">
-                <ul>
-                    <li>Developed an 81% accurate sentiment analyzer using NLTK and scikit-learn</li>
-                    <li>Collected and transcribed audio responses from 316 students to create a dataset</li>
-                    <li>Classified 317 student feedback entries as positive, negative, or neutral</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Statistical Detective Game</span>
-                <span class="item-date">03/2025</span>
-            </div>
-            <div class="item-subtitle">Volunteer Project</div>
-            <div class="item-content">
-                <ul>
-                    <li>Developed a Python program game for department's open house</li>
-                    <li>Created randomly generated data using Python's Random Module</li>
-                    <li>Designed gameplay to teach statistics through mystery solving</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Women Empowerment & Livelihood Study</span>
-                <span class="item-date">12/2023 – 04/2024</span>
-            </div>
-            <div class="item-subtitle">B.Sc. Team Project</div>
-            <div class="item-content">
-                <ul>
-                    <li>Cleaned 1,664 unstructured records from AATAPI Foundation</li>
-                    <li>Executed Chi-square tests in R to analyze education vs. savings relationships</li>
-                    <li>Built correlation matrices to map income-loan patterns</li>
-                </ul>
-            </div>
-        </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">SSC & HSC</span>
+      </div>
+      <div class="item-subtitle">Kendriya Vidyalaya No. 1 Ichhanath | Surat, Gujarat, India</div>
     </div>
+  </section>
 
-    <div class="section">
-        <h2>Organizations</h2>
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">National Service Scheme (NSS)</span>
-                <span class="item-date">12/2022 – 04/2023</span>
-            </div>
-            <div class="item-subtitle">Student Volunteer | Vadodara, India</div>
-            <div class="item-content">
-                <ul>
-                    <li>Volunteered at old-age homes providing support to elderly residents</li>
-                    <li>Coordinated a blood donation campaign for 2 days</li>
-                    <li>Conducted community surveys for local planning initiatives</li>
-                </ul>
-            </div>
-        </div>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Data Analyst Intern, Bank of India</span>
+        <span class="item-date">05/2025 – 06/2025</span>
+      </div>
+      <div class="item-subtitle">Vadodara, India</div>
+      <div class="item-content">
+        <ul>
+          <li>Conducted data analysis to support budget allocation decisions and optimize resource planning</li>
+          <li>Assisted in building dashboards for monitoring financial metrics, enhancing data visibility for decision-making</li>
+          <li>Supported market analysis by gathering insights on deposit trends and branch performance</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="section">
-        <h2>Certifications</h2>
-        <div class="two-column">
-            <div class="column">
-                <div class="item">
-                    <div class="item-title">Statistics 101</div>
-                    <div class="item-subtitle">IBM</div>
-                </div>
-                <div class="item">
-                    <div class="item-title">Data Analytics</div>
-                    <div class="item-subtitle">OneRoadMap</div>
-                </div>
-                <div class="item">
-                    <div class="item-title">Quantitative Research</div>
-                    <div class="item-subtitle">JPMorgan Chase & Co.</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="item">
-                    <div class="item-title">AI for Beginners</div>
-                    <div class="item-subtitle">HP LIFE</div>
-                </div>
-                <div class="item">
-                    <div class="item-title">Data Science & Analytics</div>
-                    <div class="item-subtitle">HP LIFE</div>
-                </div>
-                <div class="item">
-                    <div class="item-title">Data Analytics Job Simulation</div>
-                    <div class="item-subtitle">Deloitte Australia</div>
-                </div>
-            </div>
-        </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Visiting Faculty, Department of Psychology</span>
+        <span class="item-date">02/2025 – 03/2025</span>
+      </div>
+      <div class="item-subtitle">Maharaja Sayajirao University | Vadodara, India</div>
+      <div class="item-content">
+        <ul>
+          <li>Taught 130+ students Animation in Psychology & Art Minor, integrating real-world datasets</li>
+          <li>Trained students in Blender for 2D, achieving a 95% project completion rate</li>
+          <li>Redesigned course materials, reducing student queries on assignments by 30%</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="section">
-        <h2>Courses</h2>
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Visual Content Development</span>
-                <span class="item-date">08/2020 – 08/2021</span>
-            </div>
-            <div class="item-subtitle">Arena Animation | Vadodara, Gujarat</div>
-        </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Freelance Digital Artist</span>
+        <span class="item-date">02/2021 – 05/2023</span>
+      </div>
+      <div class="item-subtitle">X, Instagram, Upwork</div>
+      <div class="item-content">
+        <ul>
+          <li>Built an organic audience of 5.7K+ followers through visually compelling fan art</li>
+          <li>Created content with 514K+ impressions and 65K+ engagements on X</li>
+          <li>Delivered 20+ customized artworks for clients across 5+ countries</li>
+        </ul>
+      </div>
     </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Graphic Design Intern</span>
+        <span class="item-date">08/2021 – 11/2021</span>
+      </div>
+      <div class="item-subtitle">Social Goofy | Remote</div>
+      <div class="item-content">
+        <ul>
+          <li>Produced and optimized 30+ visuals and 10+ videos using Adobe Creative Suite</li>
+          <li>Designed comprehensive branding packages aligned with client objectives</li>
+          <li>Completed 100% of projects on time while maintaining high-quality standards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <div class="section">
-        <h2>Languages</h2>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Sentiment Analysis of MSU Students on Trending Topics</span>
+        <span class="item-date">12/2024 – 04/2025</span>
+      </div>
+      <div class="item-subtitle">M.Sc. Team Project</div>
+      <div class="item-content">
+        <ul>
+          <li>Developed an 81% accurate sentiment analyzer using NLTK and scikit-learn</li>
+          <li>Collected and transcribed audio responses from 316 students to create a dataset</li>
+          <li>Classified 317 student feedback entries as positive, negative, or neutral</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Statistical Detective Game</span>
+        <span class="item-date">03/2025</span>
+      </div>
+      <div class="item-subtitle">Volunteer Project</div>
+      <div class="item-content">
+        <ul>
+          <li>Developed a Python program game for department's open house</li>
+          <li>Created randomly generated data using Python's Random Module</li>
+          <li>Designed gameplay to teach statistics through mystery solving</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Women Empowerment & Livelihood Study</span>
+        <span class="item-date">12/2023 – 04/2024</span>
+      </div>
+      <div class="item-subtitle">B.Sc. Team Project</div>
+      <div class="item-content">
+        <ul>
+          <li>Cleaned 1,664 unstructured records from AATAPI Foundation</li>
+          <li>Executed Chi-square tests in R to analyze education vs. savings relationships</li>
+          <li>Built correlation matrices to map income-loan patterns</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="two-column">
+      <div class="column">
+        <h3>Data Tools</h3>
         <div>
-            <span class="tag">English</span>
-            <span class="tag">Hindi</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Power BI</span>
         </div>
+        
+        <h3>Programming & Analysis</h3>
+        <div>
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">NLTK</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">R</span>
+          <span class="tag">ggplot2</span>
+          <span class="tag">dplyr</span>
+        </div>
+      </div>
+      <div class="column">
+        <h3>Design Tools</h3>
+        <div>
+          <span class="tag">Adobe Photoshop</span>
+          <span class="tag">Illustrator</span>
+          <span class="tag">After Effects</span>
+          <span class="tag">Blender</span>
+        </div>
+        
+        <h3>Statistical Methods</h3>
+        <div>
+          <span class="tag">Hypothesis Testing</span>
+          <span class="tag">Regression Analysis</span>
+          <span class="tag">Data Cleaning</span>
+          <span class="tag">Sentiment Analysis</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section id="organizations">
+    <h2>Organizations</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">National Service Scheme (NSS)</span>
+        <span class="item-date">12/2022 – 04/2023</span>
+      </div>
+      <div class="item-subtitle">Student Volunteer | Vadodara, India</div>
+      <div class="item-content">
+        <ul>
+          <li>Volunteered at old-age homes providing support to elderly residents</li>
+          <li>Coordinated a blood donation campaign for 2 days</li>
+          <li>Conducted community surveys for local planning initiatives</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certifications</h2>
+    <div class="two-column">
+      <div class="column">
+        <div class="item">
+          <div class="item-title">Statistics 101</div>
+          <div class="item-subtitle">IBM</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Data Analytics</div>
+          <div class="item-subtitle">OneRoadMap</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Quantitative Research</div>
+          <div class="item-subtitle">JPMorgan Chase & Co.</div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <div class="item-title">AI for Beginners</div>
+          <div class="item-subtitle">HP LIFE</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Data Science & Analytics</div>
+          <div class="item-subtitle">HP LIFE</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Data Analytics Job Simulation</div>
+          <div class="item-subtitle">Deloitte Australia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <h2>Courses</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Visual Content Development</span>
+        <span class="item-date">08/2020 – 08/2021</span>
+      </div>
+      <div class="item-subtitle">Arena Animation | Vadodara, Gujarat</div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <h2>Languages</h2>
+    <div>
+      <span class="tag">English</span>
+      <span class="tag">Hindi</span>
+      <span class="tag">Gujarati</span>
+    </div>
+  </section>
+
+  <footer style="text-align: center; margin-top: 3rem; padding: 1rem; border-top: 1px solid #eee;">
+    <p>© 2024 Vaishali Sharma. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Highlight current section in navigation
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
