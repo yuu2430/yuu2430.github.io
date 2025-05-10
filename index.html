@@ -1,446 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <!-- Social Media Meta Tags -->
-  <meta property="og:title" content="Vaishali Sharma | MSc Statistics | Data Artist">
-  <meta property="og:description" content="Statistics graduate combining data analysis with creative design">
-  <meta property="og:image" content="https://vai2430.carrd.co/assets/images/image01.jpg?v=4f4a0f0d">
-  <meta property="og:url" content="https://yourwebsite.com">
-  <meta name="twitter:card" content="summary_large_image">
-  
-  <title>Vaishali Sharma | MSc Statistics | Data Artist</title>
-  
-  <style>
-    :root {
-      --primary-color: #2a5db0;
-      --secondary-color: #555;
-      --light-gray: #f8f9fa;
-      --border-color: #eee;
-    }
-    
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      background-image: radial-gradient(circle at 1px 1px, #f0f0f0 1px, transparent 0);
-      background-size: 20px 20px;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    
-    /* Navigation */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000;
-      padding: 15px 0;
-    }
-    
-    .navbar-brand {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #222;
-      text-decoration: none;
-    }
-    
-    .navbar-nav {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .nav-item {
-      margin-left: 30px;
-    }
-    
-    .nav-link {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    
-    .nav-link:hover {
-      color: var(--primary-color);
-    }
-    
-    /* Main Content */
-    .main-content {
-      margin-top: 80px;
-      padding: 40px 0;
-    }
-    
-    /* Profile Section */
-    .profile-section {
-      display: flex;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-    
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 40px;
-      border: 3px solid var(--primary-color);
-      transition: transform 0.5s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
-    .profile-photo:hover {
-      transform: rotate(5deg);
-    }
-    
-    .profile-info {
-      flex: 1;
-    }
-    
-    .profile-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 0 0 5px 0;
-      color: #222;
-    }
-    
-    .profile-title {
-      font-weight: 500;
-      color: var(--secondary-color);
-      margin: 0 0 10px 0;
-    }
-    
-    .profile-links {
-      margin-top: 15px;
-    }
-    
-    .profile-links a {
-      color: var(--primary-color);
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    
-    .profile-links a:hover {
-      animation: pulse 1s infinite;
-      color: #1a3d7c;
-    }
-    
-    /* Sections */
-    .section {
-      margin-bottom: 50px;
-    }
-    
-    .section-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #222;
-      background: linear-gradient(90deg, #FF9A9E 0%, #FAD0C4 50%, #A18CD1 100%);
-      background-size: 100% 3px;
-      background-repeat: no-repeat;
-      background-position: bottom left;
-      padding-bottom: 8px;
-      display: inline-block;
-    }
-    
-    /* About Text */
-    .about-text p {
-      margin-bottom: 15px;
-      text-align: justify;
-    }
-    
-    .highlight {
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-    
-    /* Contact Info */
-    .contact-info {
-      margin-bottom: 10px;
-    }
-    
-    /* Items */
-    .item {
-      margin-bottom: 25px;
-    }
-    
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-    }
-    
-    .item-title {
-      font-weight: 600;
-    }
-    
-    .item-date {
-      color: var(--secondary-color);
-    }
-    
-    .item-subtitle {
-      color: var(--secondary-color);
-      margin-bottom: 8px;
-    }
-    
-    .item-list {
-      padding-left: 20px;
-    }
-    
-    .item-list li {
-      margin-bottom: 8px;
-      position: relative;
-    }
-    
-    .item-list li::before {
-      content: "•";
-      color: var(--primary-color);
-      position: absolute;
-      left: -15px;
-    }
-    
-    /* Project Cards */
-    .project-card {
-      transition: transform 0.3s, box-shadow 0.3s;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    /* Skills */
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    .skill-category {
-      flex: 1;
-      min-width: 200px;
-      background: var(--light-gray);
-      padding: 15px;
-      border-radius: 5px;
-    }
-    
-    .skill-title {
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: var(--primary-color);
-    }
-    
-    /* Back to Top Button */
-    #back-to-top {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 99;
-      border: none;
-      outline: none;
-      background-color: var(--primary-color);
-      color: white;
-      cursor: pointer;
-      padding: 12px;
-      border-radius: 50%;
-      font-size: 18px;
-      transition: all 0.3s;
-    }
-    
-    #back-to-top:hover {
-      background-color: #1a3d7c;
-      transform: scale(1.1);
-    }
-    
-    /* Availability Badge */
-    .availability-badge {
-      position: absolute;
-      bottom: -10px;
-      right: -10px;
-      background: white;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .profile-section {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .profile-photo {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-      
-      .navbar-nav {
-        flex-direction: column;
-      }
-      
-      .nav-item {
-        margin-left: 0;
-        margin-bottom: 10px;
-      }
-      
-      .skills-container {
-        flex-direction: column;
-      }
-    }
-    
-    /* Print Styles */
-    @media print {
-      body {
-        background: white !important;
-        color: black !important;
-        font-size: 12pt;
-      }
-      .navbar, footer, #back-to-top {
-        display: none !important;
-      }
-      a {
-        color: black !important;
-        text-decoration: none !important;
-      }
-      .section {
-        page-break-inside: avoid;
-      }
-      .profile-section {
-        flex-direction: row !important;
-      }
-      .container {
-        max-width: 100%;
-        padding: 0 10mm;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishali Sharma | MSc Statistics | Data Artist</title>
+    <style>
+        :root {
+            --primary-color: #2a5db0;
+            --secondary-color: #555;
+            --light-gray: #f8f9fa;
+            --border-color: #eee;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+        }
+        
+        .profile-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            flex-shrink: 0;
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .profile-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            color: #222;
+        }
+        
+        .profile-title {
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin: 0 0 10px 0;
+        }
+        
+        .profile-links {
+            margin: 15px 0;
+        }
+        
+        .profile-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        
+        .intro-text p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .info-card {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .info-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .info-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-photo {
+                margin-bottom: 20px;
+            }
+            
+            .profile-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .profile-links a {
+                margin: 0;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- Back to Top Button -->
-  <button id="back-to-top" title="Go to top">↑</button>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <a class="navbar-brand" href="#">Vaishali Sharma</a>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="main-content">
-    <div class="container">
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="profile-section">
-          <div style="position: relative;">
-            <img src="profile.jpg" alt="Vaishali Sharma" class="profile-photo">
-            <div class="availability-badge">🔥 Available for internships</div>
-          </div>
-          <div class="profile-info">
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Vaishali Sharma" class="profile-photo">
+        <div class="profile-info">
             <h1 class="profile-name">Vaishali Sharma</h1>
             <p class="profile-title">MSc Student in Statistics<br>Maharaja Sayajirao University of Baroda</p>
+            
             <div class="profile-links">
-              <a href="cv.pdf">CV</a>
-              <a href="https://vai2430.carrd.co">Portfolio</a>
-              <a href="https://linkedin.com/in/vai2430">LinkedIn</a>
-              <a href="https://github.com/vai2430">GitHub</a>
+                <a href="cv.pdf">CV</a>
+                <a href="https://vai2430.carrd.co">Portfolio</a>
+                <a href="https://linkedin.com/in/vai2430">LinkedIn</a>
+                <a href="https://github.com/vai2430">GitHub</a>
             </div>
-          </div>
+            
+            <div class="intro-text">
+                <p>I am currently pursuing my <span class="highlight">Master of Science in Statistics</span> at <span class="highlight">Maharaja Sayajirao University of Baroda</span>. My academic journey combines statistical expertise with practical data analysis skills and creative design capabilities.</p>
+                
+                <p>With experience in <span class="highlight">data analysis</span>, <span class="highlight">statistical modeling</span>, and <span class="highlight">data visualization</span>, I bring a unique interdisciplinary perspective to solving complex problems. My background in <span class="highlight">digital art and design</span> further enhances my ability to communicate data insights effectively.</p>
+                
+                <p>I am currently looking for a <span class="highlight">research internship position</span> for the summer of 2025!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact & Education Section -->
+    <div class="info-grid">
+        <div class="info-card">
+            <h2 class="info-title">Contact</h2>
+            <div class="info-item">
+                <i class="fas fa-envelope info-icon"></i>
+                <span>vaishalis2430@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone info-icon"></i>
+                <span>+91 8160173096</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt info-icon"></i>
+                <span>Vadodara, India</span>
+            </div>
         </div>
         
-        <div class="about-text">
-          <p>I am currently pursuing my <span class="highlight">Master of Science in Statistics</span> at <span class="highlight">Maharaja Sayajirao University of Baroda</span>. My academic journey combines statistical expertise with practical data analysis skills and creative design capabilities.</p>
-          
-          <p>With experience in <span class="highlight">data analysis</span>, <span class="highlight">statistical modeling</span>, and <span class="highlight">data visualization</span>, I bring a unique interdisciplinary perspective to solving complex problems. My background in <span class="highlight">digital art and design</span> further enhances my ability to communicate data insights effectively.</p>
-          
-          <p>I am currently looking for a <span class="highlight">research internship position</span> for the summer of 2025!</p>
+        <div class="info-card">
+            <h2 class="info-title">Education</h2>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap info-icon"></i>
+                <div>
+                    <div>Master of Science, Statistics, 2024–Present</div>
+                    <div style="color: var(--secondary-color); font-size: 0.9em;">Maharaja Sayajirao University of Baroda</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap info-icon"></i>
+                <div>
+                    <div>Bachelor of Science, Statistics, 2021–2024</div>
+                    <div style="color: var(--secondary-color); font-size: 0.9em;">Maharaja Sayajirao University of Baroda</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-school info-icon"></i>
+                <div>
+                    <div>SSC & HSC</div>
+                    <div style="color: var(--secondary-color); font-size: 0.9em;">Kendriya Vidyalaya No. 1 Ichhanath</div>
+                </div>
+            </div>
         </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-info"><strong>Phone:</strong> +91 8160173096</p>
-        <p class="contact-info"><strong>Email:</strong> vaishalis2430@gmail.com</p>
-        <p class="contact-info"><strong>Location:</strong> Vadodara, India</p>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education" class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="item">
-          <div class="item-header">
-            <span class="item-title">Master of Science, Statistics</span>
-            <span class="item-date">08/2024 – Present</span>
-          </div>
-          <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
-        </div>
-        
-        <div class="item">
-          <div class="item-header">
-            <span class="item-title">Bachelor of Science, Statistics</span>
-            <span class="item-date">10/2021 – 05/2024</span>
-          </div>
-          <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
-        </div>
-        
-        <div class="item">
-          <div class="item-header">
-            <span class="item-title">SSC & HSC</span>
-            <span class="item-date"></span>
-          </div>
-          <div class="item-subtitle">Kendriya Vidyalaya No. 1 Ichhanath | Surat, Gujarat, India</div>
-        </div>
-      </section>
-
+    </div>
+  
       <!-- Experience Section -->
       <section id="experience" class="section">
         <h2 class="section-title">Experience</h2>
