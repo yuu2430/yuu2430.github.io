@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Vaishali Sharma">
   <meta name="description" content="Data Analyst & Statistician">
   
@@ -14,7 +13,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   
-  <title>Vaishali Sharma</title>
+  <title>Vaishali Sharma | Data Analyst</title>
   
   <style>
     :root {
@@ -36,14 +35,13 @@
     }
     
     a {
-      color: var(--secondary);
-      text-decoration: none;
-      transition: all 0.2s ease;
+      color: #2962ff;
+      font-weight: 500;
+      text-decoration: underline;
     }
     
     a:hover {
-      color: var(--primary);
-      text-decoration: underline;
+      color: #0039cb;
     }
     
     h1, h2, h3 {
@@ -104,6 +102,7 @@
     .social-links a {
       margin-right: 1rem;
       font-size: 1.1rem;
+      text-decoration: none;
     }
     
     /* Content sections */
@@ -130,6 +129,11 @@
       color: #666;
       font-style: italic;
       margin-bottom: 0.5rem;
+    }
+    
+    .item-subtitle a {
+      margin-left: 8px;
+      text-decoration: none;
     }
     
     .item-date {
@@ -172,9 +176,40 @@
       font-size: 0.9rem;
     }
     
-    .highlight {
-      color: #dc143c;
+    /* Navigation */
+    nav {
+      background-color: white;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .nav-link {
+      margin: 0 1rem;
+      padding: 0.5rem 0;
       font-weight: 500;
+      color: var(--primary);
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    
+    .nav-link:hover {
+      color: var(--secondary);
+      border-bottom: 2px solid var(--secondary);
+    }
+    
+    .active {
+      border-bottom: 2px solid var(--secondary);
     }
     
     /* Responsive adjustments */
@@ -202,42 +237,6 @@
         margin-top: 0.3rem;
       }
     }
-    
-    /* Navigation */
-    nav {
-      background-color: white;
-      padding: 1rem 0;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .nav-container {
-      display: flex;
-      justify-content: center;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
-    .nav-link {
-      margin: 0 1rem;
-      padding: 0.5rem 0;
-      font-weight: 500;
-      color: var(--primary);
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s ease;
-    }
-    
-    .nav-link:hover {
-      color: var(--secondary);
-      border-bottom: 2px solid var(--secondary);
-      text-decoration: none;
-    }
-    
-    .active {
-      border-bottom: 2px solid var(--secondary);
-    }
   </style>
 </head>
 
@@ -255,14 +254,14 @@
   <section id="about">
     <div class="profile-section">
       <div class="profile-left">
-        <!-- Add your photo by uploading a file named profile.jpg to your repo -->
-        <img src="profile.jpg" class="profile-img" alt="Vaishali Sharma">
+        <!-- Your profile photo - upload to author/profile.png -->
+        <img src="author/profile.png" class="profile-img" alt="Vaishali Sharma">
         <div class="profile-title">
           <h1>Vaishali Sharma</h1>
           <div class="profile-subtitle">Data Analyst & Statistician</div>
           <div class="social-links">
             <a href="https://linkedin.com/in/vai2430"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-briefcase"></i></a>
+            <a href="https://vai2430.carrd.co/"><i class="fas fa-briefcase"></i></a>
             <a href="https://github.com/yuu2430"><i class="fab fa-github"></i></a>
             <a href="cv.pdf"><i class="fas fa-file-pdf"></i> CV</a>
           </div>
@@ -285,7 +284,6 @@
   </section>
 
   <div class="content-section">
-    
     <section id="education">
       <h2>Education</h2>
       <div class="item">
@@ -334,7 +332,10 @@
           <span class="item-title">Visiting Faculty, Department of Psychology</span>
           <span class="item-date">02/2025 – 03/2025</span>
         </div>
-        <div class="item-subtitle">Maharaja Sayajirao University | Vadodara, India</div>
+        <div class="item-subtitle">
+          Maharaja Sayajirao University | Vadodara, India
+          <a href="https://drive.google.com/file/d/1rjFawo3KdaGdqcIDeF7qRs8aLZ4V_c9D/view" target="_blank">(LOR)</a>
+        </div>
         <div class="item-content">
           <ul>
             <li>Taught 130+ students Animation in Psychology & Art Minor, integrating real-world datasets</li>
@@ -349,12 +350,31 @@
           <span class="item-title">Freelance Digital Artist</span>
           <span class="item-date">02/2021 – 05/2023</span>
         </div>
-        <div class="item-subtitle">X, Instagram, Upwork</div>
+        <div class="item-subtitle">
+          Portfolio: <a href="https://vai2430.carrd.co/" target="_blank">vai2430.carrd.co</a>
+        </div>
         <div class="item-content">
           <ul>
             <li>Built an organic audience of 5.7K+ followers through visually compelling fan art</li>
             <li>Created content with 514K+ impressions and 65K+ engagements on X</li>
             <li>Delivered 20+ customized artworks for clients across 5+ countries</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Graphic Design Intern</span>
+          <span class="item-date">08/2021 – 11/2021</span>
+        </div>
+        <div class="item-subtitle">
+          Social Goofy | <a href="https://drive.google.com/file/d/1DZ_JsC1YGajYTA13JkQrwGDP1J9KcDO8/view" target="_blank">LOR</a>
+        </div>
+        <div class="item-content">
+          <ul>
+            <li>Produced and optimized 30+ visuals and 10+ videos using Adobe Creative Suite</li>
+            <li>Designed comprehensive branding packages aligned with client objectives</li>
+            <li>Completed 100% of projects on time while maintaining high-quality standards</li>
           </ul>
         </div>
       </div>
@@ -367,7 +387,9 @@
           <span class="item-title">Sentiment Analysis of MSU Students on Trending Topics</span>
           <span class="item-date">12/2024 – 04/2025</span>
         </div>
-        <div class="item-subtitle">M.Sc. Team Project</div>
+        <div class="item-subtitle">
+          <a href="https://github.com/yuu2430/sentiment-analysis" target="_blank">View Code</a>
+        </div>
         <div class="item-content">
           <ul>
             <li>Developed an 81% accurate sentiment analyzer using NLTK and scikit-learn</li>
@@ -382,12 +404,31 @@
           <span class="item-title">Statistical Detective Game</span>
           <span class="item-date">03/2025</span>
         </div>
-        <div class="item-subtitle">Volunteer Project</div>
+        <div class="item-subtitle">
+          <a href="https://github.com/yuu2430/StatisticalDetetective" target="_blank">View Code</a>
+        </div>
         <div class="item-content">
           <ul>
             <li>Developed a Python program game for department's open house</li>
             <li>Created randomly generated data using Python's Random Module</li>
             <li>Designed gameplay to teach statistics through mystery solving</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Women Empowerment & Livelihood Study</span>
+          <span class="item-date">12/2023 – 04/2024</span>
+        </div>
+        <div class="item-subtitle">
+          <a href="https://github.com/yuu2430/Women-and-Livelihood-Project" target="_blank">View Code</a>
+        </div>
+        <div class="item-content">
+          <ul>
+            <li>Cleaned 1,664 unstructured records from AATAPI Foundation</li>
+            <li>Executed Chi-square tests in R to analyze education vs. savings relationships</li>
+            <li>Built correlation matrices to map income-loan patterns</li>
           </ul>
         </div>
       </div>
@@ -467,6 +508,7 @@
       <div>
         <span class="tag">English</span>
         <span class="tag">Hindi</span>
+        <span class="tag">Gujarati</span>
       </div>
     </section>
   </div>
