@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | MSc Student in Statistics</title>
+    <title>Vaishali Sharma | MSc in Statistics</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
         
@@ -166,7 +166,7 @@
             color: var(--secondary-color);
         }
         
-        .education-item, .experience-item {
+        .education-item, .experience-item, .project-item {
             margin-bottom: 18px;
         }
         
@@ -190,6 +190,18 @@
             color: var(--secondary-color);
             font-size: 15px;
             margin-bottom: 5px;
+        }
+        
+        .item-description {
+            margin: 8px 0;
+        }
+        
+        .item-list {
+            padding-left: 20px;
+        }
+        
+        .item-list li {
+            margin-bottom: 6px;
         }
         
         .news-list {
@@ -216,6 +228,34 @@
             color: #222;
         }
         
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 5px;
+            font-size: 14.5px;
+        }
+        
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -235,35 +275,39 @@
             .sidebar {
                 width: 100%;
             }
+            
+            .skills-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1 class="name-title">Your Name</h1>
+        <h1 class="name-title">Vaishali Sharma</h1>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#publications">Publications</a>
-            <a href="#activities">Activities</a>
-            <a href="#awards">Awards</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
             <a href="#certificates">Certificates</a>
             <a href="#organizations">Organizations</a>
-            <a href="#languages">Languages</a>
         </div>
     </div>
     
     <div class="main-container">
         <div class="sidebar">
             <div class="profile-card">
-                <h2 class="name">Your Name</h2>
-                <p class="position">MSc Student</p>
-                <p class="affiliation">Department of Statistics, MSUB</p>
+                <h2 class="name">Vaishali Sharma</h2>
+                <p class="position">MSc Student in Statistics</p>
+                <p class="affiliation">Maharaja Sayajirao University of Baroda</p>
                 <div class="profile-links">
-                    <a href="#" target="_blank">Curriculum Vitae</a>
-                    <a href="#" target="_blank">Google Scholar</a>
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Twitter</a>
+                    <a href="tel:+918160173096">+91 8160173096</a>
+                    <a href="mailto:vaishalis2430@gmail.com">vaishalis2430@gmail.com</a>
+                    <a href="https://linkedin.com/in/vai2430" target="_blank">LinkedIn</a>
+                    <a href="https://vai2430.carrd.co" target="_blank">Portfolio</a>
+                    <a href="https://github.com/vai2430" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
@@ -271,125 +315,210 @@
         <div class="content">
             <section id="home" class="section">
                 <div class="intro-text">
-                    <p>I am a MSc student in the <span class="highlight">Department of Statistics</span> at <span class="highlight">Montana State University Billings (MSUB)</span>. My research focuses on <span class="highlight">applied statistics</span>, <span class="highlight">machine learning applications</span>, and <span class="highlight">data-driven decision making</span>.</p>
+                    <p>I am currently pursuing my <span class="highlight">Master of Science in Statistics</span> at <span class="highlight">Maharaja Sayajirao University of Baroda</span>. My academic journey combines statistical expertise with practical data analysis skills and creative design capabilities.</p>
                     
-                    <p>Under the supervision of <span class="highlight">Prof. Advisor Name</span>, I am currently working on <span class="highlight">research topic</span> that combines statistical theory with practical applications in <span class="highlight">application domain</span>.</p>
-                    
-                    <p>I am actively seeking <span class="highlight">research internship opportunities</span> for summer 2025 to apply my statistical skills to real-world problems.</p>
+                    <p>With experience in <span class="highlight">data analysis</span>, <span class="highlight">statistical modeling</span>, and <span class="highlight">data visualization</span>, I bring a unique interdisciplinary perspective to solving complex problems. My background in <span class="highlight">digital art and design</span> further enhances my ability to communicate data insights effectively.</p>
                 </div>
-            </section>
-            
-            <section id="contact" class="section">
-                <h2 class="section-title">Contact</h2>
-                <p class="contact-info">your.email@msub.edu</p>
-                <p class="contact-info">Department of Statistics</p>
-                <p class="contact-info">Montana State University Billings</p>
-                <p class="contact-info">1500 University Drive, Billings, MT 59101</p>
             </section>
             
             <section id="education" class="section">
                 <h2 class="section-title">Education</h2>
                 <div class="education-item">
                     <div class="item-header">
-                        <span class="item-title">MSc in Statistics</span>
-                        <span class="item-date">2023 - Present</span>
+                        <span class="item-title">Master of Science, Statistics</span>
+                        <span class="item-date">08/2024 – Present</span>
                     </div>
-                    <div class="item-subtitle">Montana State University Billings, USA</div>
-                    <ul>
-                        <li>Thesis: "Your Thesis Title" (Advisor: Prof. Name)</li>
-                        <li>GPA: X.XX/4.00</li>
-                    </ul>
+                    <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
                 </div>
                 
                 <div class="education-item">
                     <div class="item-header">
-                        <span class="item-title">BSc in Statistics</span>
-                        <span class="item-date">2019 - 2023</span>
+                        <span class="item-title">Bachelor of Science, Statistics</span>
+                        <span class="item-date">10/2021 – 05/2024</span>
                     </div>
-                    <div class="item-subtitle">Your University, Country</div>
-                    <ul>
-                        <li>Graduated with Honors</li>
-                        <li>GPA: X.XX/4.00</li>
-                    </ul>
+                    <div class="item-subtitle">Maharaja Sayajirao University of Baroda | Vadodara, Gujarat, India</div>
                 </div>
-            </section>
-            
-            <section id="publications" class="section">
-                <h2 class="section-title">Publications</h2>
-                <p>Coming soon...</p>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <span class="item-title">SSC & HSC</span>
+                        <span class="item-date"></span>
+                    </div>
+                    <div class="item-subtitle">Kendriya Vidyalaya No. 1 Ichhanath | Surat, Gujarat, India</div>
+                </div>
             </section>
             
             <section id="experience" class="section">
                 <h2 class="section-title">Experience</h2>
                 <div class="experience-item">
                     <div class="item-header">
-                        <span class="item-title">Research Assistant</span>
-                        <span class="item-date">2023 - Present</span>
+                        <span class="item-title">Data Analyst Intern</span>
+                        <span class="item-date">05/2025 – 06/2025</span>
                     </div>
-                    <div class="item-subtitle">Department of Statistics, MSUB</div>
-                    <ul>
-                        <li>Conducting research on statistical methods for [specific area]</li>
-                        <li>Developing predictive models using [techniques]</li>
-                        <li>Collaborating with interdisciplinary team on [project]</li>
+                    <div class="item-subtitle">Bank of India | Vadodara, India</div>
+                    <ul class="item-list">
+                        <li>Conducted data analysis to support budget allocation decisions and optimize resource planning</li>
+                        <li>Assisted in building dashboards for monitoring financial metrics, enhancing data visibility for decision-making</li>
+                        <li>Supported market analysis by gathering insights on deposit trends and branch performance</li>
                     </ul>
                 </div>
                 
                 <div class="experience-item">
                     <div class="item-header">
-                        <span class="item-title">Teaching Assistant</span>
-                        <span class="item-date">2023 - Present</span>
+                        <span class="item-title">Visiting Faculty</span>
+                        <span class="item-date">02/2025 – 03/2025</span>
                     </div>
-                    <div class="item-subtitle">Department of Statistics, MSUB</div>
-                    <ul>
-                        <li>Assisted in teaching [Course Name] for undergraduate students</li>
-                        <li>Held office hours and review sessions</li>
-                        <li>Graded assignments and provided feedback</li>
+                    <div class="item-subtitle">Department of Psychology, Maharaja Sayajirao University | Vadodara, Gujarat, India</div>
+                    <ul class="item-list">
+                        <li>Taught 130+ students Animation in Psychology & Art Minor, integrating real-world datasets</li>
+                        <li>Trained students in Blender for 2D, achieving a 95% project completion rate</li>
+                        <li>Redesigned course materials, reducing student queries on assignments by 30%</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Freelance Digital Artist</span>
+                        <span class="item-date">02/2021 – 05/2023</span>
+                    </div>
+                    <div class="item-subtitle">X, Instagram, Upwork</div>
+                    <ul class="item-list">
+                        <li>Worked as a content creator, skilled in illustration and character design, building an organic audience of 5.7K+ followers</li>
+                        <li>Shared digital art on X, with one post reaching 514K impressions and 65K+ engagements</li>
+                        <li>Delivered 20+ customized stylized Digital Artworks to clients across 5+ countries</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Graphic Design Intern</span>
+                        <span class="item-date">08/2021 – 11/2021</span>
+                    </div>
+                    <div class="item-subtitle">Social Goofy | Work from Home</div>
+                    <ul class="item-list">
+                        <li>Produced and optimized 30+ visuals and 10+ videos using Adobe Illustrator, Photoshop, and After Effects</li>
+                        <li>Designed comprehensive branding packages, aligning visual content with client objectives</li>
+                        <li>Completed 100% of projects on time while maintaining high-quality standards under tight deadlines</li>
                     </ul>
                 </div>
             </section>
             
-            <section id="awards" class="section">
-                <h2 class="section-title">Awards & Honors</h2>
-                <ul>
-                    <li>Graduate Research Fellowship, MSUB (2024)</li>
-                    <li>Outstanding Academic Achievement Award (2023)</li>
-                    <li>Dean's List, All Semesters (2019-2023)</li>
-                </ul>
+            <section id="projects" class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-item">
+                    <div class="item-header">
+                        <span class="item-title">Sentiment Analysis of MSU students on Trending Topics</span>
+                        <span class="item-date">12/2024 – 04/2025</span>
+                    </div>
+                    <div class="item-subtitle">M.Sc. Team Project | <a href="#" target="_blank" style="color: var(--primary-color);">GitHub</a></div>
+                    <ul class="item-list">
+                        <li>Devised an 81% accuracy sentiment analyzer through machine learning concepts, leveraging NLTK and scikit-learn</li>
+                        <li>Collected and transcribed audio responses from 316 MSU students to create a dataset</li>
+                        <li>Developed a sentiment analysis model using Python and NLTK to classify 317 student feedback entries</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <span class="item-title">Statistical Detective Game</span>
+                        <span class="item-date">03/2025</span>
+                    </div>
+                    <div class="item-subtitle">Volunteer Project | <a href="#" target="_blank" style="color: var(--primary-color);">GitHub</a></div>
+                    <ul class="item-list">
+                        <li>Developed a Python program game for the department's open house, randomly generated data using the Random Module</li>
+                        <li>Players solve mysteries by interpreting clues and applying basic statistics, making learning engaging and hands-on</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <span class="item-title">Women Empowerment & Livelihood Study</span>
+                        <span class="item-date">12/2023 – 04/2024</span>
+                    </div>
+                    <div class="item-subtitle">B.Sc. Team Project | <a href="#" target="_blank" style="color: var(--primary-color);">GitHub</a></div>
+                    <ul class="item-list">
+                        <li>Data cleaning of 1,664 unstructured records by AATAPI Foundation (income, loans, demographics)</li>
+                        <li>Translated vernacular data into analyzable formats, enabling team-wide consistency</li>
+                        <li>Executed Chi-square tests in R to isolate key relationships (e.g., education vs. savings)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="skills" class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-title">Data Tools</div>
+                        <ul class="skill-list">
+                            <li>Tableau</li>
+                            <li>Excel</li>
+                            <li>Statistical Methods</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">Programming & Analysis</div>
+                        <ul class="skill-list">
+                            <li>Python (Pandas, NumPy, Matplotlib, NLTK)</li>
+                            <li>R (ggplot2, dplyr)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">Design Tools</div>
+                        <ul class="skill-list">
+                            <li>Adobe Photoshop</li>
+                            <li>Illustrator</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             
             <section id="certificates" class="section">
                 <h2 class="section-title">Certificates</h2>
-                <ul>
-                    <li>Advanced Data Science Specialization, Coursera (2023)</li>
-                    <li>Machine Learning Certification, Stanford Online (2022)</li>
-                    <li>Statistical Programming with R, DataCamp (2021)</li>
+                <ul class="item-list">
+                    <li>Statistics 101 — IBM Data Analytics</li>
+                    <li>OneRoadMap Quantitative Research Virtual Experience Program — JPMorgan Chase & Co.</li>
+                    <li>AI for Beginners — HP LIFE</li>
+                    <li>Data Science & Analytics — HP LIFE</li>
+                    <li>ESG Job Simulation — TATA group</li>
+                    <li>Data Analytics Job Simulation — Deloitte Australia</li>
                 </ul>
             </section>
             
+            <section id="courses" class="section">
+                <h2 class="section-title">Courses</h2>
+                <div class="education-item">
+                    <div class="item-header">
+                        <span class="item-title">Visual Content Development</span>
+                        <span class="item-date">08/2020 – 08/2021</span>
+                    </div>
+                    <div class="item-subtitle">Arena Animation | Vadodara, Gujarat</div>
+                </div>
+            </section>
+            
             <section id="organizations" class="section">
-                <h2 class="section-title">Professional Organizations</h2>
-                <ul>
-                    <li>American Statistical Association (ASA)</li>
-                    <li>Institute of Mathematical Statistics (IMS)</li>
-                    <li>Montana Chapter of ASA</li>
-                </ul>
+                <h2 class="section-title">Organizations</h2>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">NSS, Student</span>
+                        <span class="item-date">12/2022 – 04/2023</span>
+                    </div>
+                    <div class="item-subtitle">Vadodara, Gujarat, India</div>
+                    <ul class="item-list">
+                        <li>Completed a 4-month National Service Scheme (NSS) volunteer program</li>
+                        <li>Volunteered at old-age homes for more than 3 hours weekly</li>
+                        <li>Coordinated and supported a blood donation campaign</li>
+                        <li>Conducted community surveys to identify areas in need of development</li>
+                    </ul>
+                </div>
             </section>
             
             <section id="languages" class="section">
                 <h2 class="section-title">Languages</h2>
-                <ul>
-                    <li>English (Fluent)</li>
-                    <li>Your Native Language (Native)</li>
-                    <li>Additional Language (Intermediate)</li>
-                </ul>
-            </section>
-            
-            <section id="news" class="section">
-                <h2 class="section-title">Recent News</h2>
-                <ul class="news-list">
-                    <li class="news-item"><span class="news-date">[May 2024]</span> Presented research at the Montana Statistics Conference</li>
-                    <li class="news-item"><span class="news-date">[Mar 2024]</span> Awarded the Graduate Research Fellowship</li>
-                    <li class="news-item"><span class="news-date">[Jan 2024]</span> Started position as Teaching Assistant for Advanced Statistics course</li>
+                <ul class="item-list">
+                    <li>English</li>
+                    <li>Hindi</li>
                 </ul>
             </section>
         </div>
